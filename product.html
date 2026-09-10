@@ -228,10 +228,16 @@
           const v = parseInt(qtyInput.value);
           if (v < 10) qtyInput.value = v + 1;
         });
+        qtyInput.addEventListener('change', () => {
+          const v = parseInt(qtyInput.value);
+          if (isNaN(v) || v < 1) qtyInput.value = 1;
+          else if (v > 10) qtyInput.value = 10;
+        });
 
         document.getElementById('add-to-cart').addEventListener('click', () => {
           if (!selectedSize || !currentProduct) return;
-          const qty = parseInt(document.getElementById('qty-input').value) || 1;
+          const rawQty = parseInt(document.getElementById('qty-input').value);
+          const qty = (rawQty >= 1 && rawQty <= 10) ? rawQty : 1;
           Cart.addToCart(currentProduct, selectedSize, qty);
           showToast('Ajouté au panier !');
           const conf = document.getElementById('cart-confirmation');
