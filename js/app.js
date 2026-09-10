@@ -300,7 +300,7 @@ function showToast(message) {
   }
   const toast = document.createElement('div');
   toast.className = 'toast-notification';
-  toast.innerHTML = '<span style="font-size:1.1rem">✓</span> ' + message;
+  toast.textContent = '✓ ' + message;
   container.appendChild(toast);
   requestAnimationFrame(() => toast.classList.add('show'));
   setTimeout(() => {

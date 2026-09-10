@@ -15,19 +15,21 @@ const Cart = {
 
   addToCart(product, size, quantity) {
     const cart = this.getCart();
+    const qty = Math.max(1, Math.min(10, Math.floor(quantity)));
+    const pid = product.id || product.slug;
     const existing = cart.find(
-      (item) => item.product_id === product.id && item.size === size
+      (item) => (item.product_id === pid || item.slug === product.slug) && item.size === size
     );
     if (existing) {
-      existing.quantity += quantity;
+      existing.quantity = Math.min(existing.quantity + qty, 99);
     } else {
       cart.push({
-        product_id: product.id,
+        product_id: pid,
         slug: product.slug,
         name: product.name,
         size,
-        quantity,
-        price_cents: product.price_cents,
+        quantity: qty,
+        price_cents: Math.max(0, Math.floor(product.price_cents)),
         image_url: product.image_url,
       });
     }
@@ -45,7 +47,7 @@ const Cart = {
     if (qty < 1) {
       cart.splice(index, 1);
     } else {
-      cart[index].quantity = qty;
+      cart[index].quantity = Math.min(qty, 99);
     }
     this._save(cart);
   },
