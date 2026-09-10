@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" rx="24" fill="#F5F0E8"/>
+  <!-- T-shirt shape -->
+  <path d="M120,100 L100,100 L60,140 L90,170 L110,150 L110,360 L290,360 L290,150 L310,170 L340,140 L300,100 L280,100 L260,120 C245,135 155,135 140,120 Z" fill="#FAFAF7" stroke="#E8E3D8" stroke-width="2"/>
+  <!-- Colosseum silhouette -->
+  <g transform="translate(135,180)" fill="#2D5016">
+    <!-- Main elliptical structure -->
+    <ellipse cx="65" cy="45" rx="65" ry="40" fill="none" stroke="#2D5016" stroke-width="3"/>
+    <!-- Top tier arches -->
+    <rect x="5" y="10" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="18" y="6" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="31" y="3" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="44" y="2" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="57" y="1" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="70" y="1" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="83" y="3" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="96" y="6" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <rect x="109" y="10" width="8" height="18" rx="4" fill="#F5F0E8"/>
+    <!-- Middle tier arches -->
+    <rect x="8" y="32" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="22" y="28" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="36" y="26" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="50" y="25" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="64" y="25" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="78" y="26" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="92" y="28" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="106" y="32" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <!-- Bottom tier arches -->
+    <rect x="15" y="52" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="30" y="50" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="45" y="49" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="60" y="49" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="75" y="50" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <rect x="90" y="52" width="8" height="16" rx="4" fill="#F5F0E8"/>
+    <!-- Broken right side -->
+    <path d="M115,20 L125,15 L122,35 L118,50 L112,65" stroke="#2D5016" stroke-width="2" fill="none" opacity="0.4"/>
+  </g>
+  <!-- SEASO text -->
+  <text x="200" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" letter-spacing="4" fill="#2D5016">SEASO</text>
+  <!-- Product name -->
+  <text x="200" y="420" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#1A1A1A">Colisée</text>
+  <text x="200" y="445" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#999">Italie</text>
+</svg>

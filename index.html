@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEASO — T-shirts bio des 7 merveilles du monde</title>
+  <meta name="description" content="SEASO : t-shirts 100% coton bio, 100% belges, inspirés des 7 merveilles du monde.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#1B3A2D', dark: '#0F2A1E' },
+            gold: { DEFAULT: '#C9A84C', dark: '#A68B3A' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body class="font-sans text-[#E8E4DD] antialiased">
+
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>🌿 Livraison gratuite dès 50€ &nbsp;·&nbsp; 100% coton bio &nbsp;·&nbsp; Made in Belgium 🇧🇪 &nbsp;·&nbsp; Retour gratuit sous 14 jours &nbsp;·&nbsp; Zéro plastique ♻️</span>
+    </div>
+  </div>
+
+  <div id="loader-screen" class="loader-screen">
+    <div class="loader-logo-wrap"><div class="loader-logo">SEASO</div></div>
+    <div class="loader-ring-wrap"><div class="loader-ring"></div></div>
+    <p class="loader-tagline">7 merveilles · coton bio</p>
+  </div>
+
+  <div id="site-header"></div>
+
+  <!-- Hero -->
+  <section class="hero-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center" style="position:relative;z-index:1">
+      <p class="text-sm uppercase tracking-wide hero-subtitle mb-5" data-reveal="up">
+        Collection inspirée des 7 merveilles
+      </p>
+      <h1 class="font-display hero-title font-bold" style="line-height:1.05">
+        <span class="split-text">Des t-shirts qui font le tour du monde</span>
+      </h1>
+      <p class="mt-6 text-lg hero-desc max-w-xl mx-auto" data-reveal="up">
+        100&nbsp;% coton bio &middot; 100&nbsp;% belge &middot; 7 designs uniques
+      </p>
+      <div class="mt-8 flex items-center justify-center gap-5 flex-wrap" data-reveal="up">
+        <a href="/catalog.html" class="btn-primary text-lg !px-10 !py-4"><span>Découvrir la collection</span></a>
+        <a href="/about.html" class="text-white/60 font-medium border-b border-white/20 hover:text-white hover:border-white/50 transition-all duration-300 py-3 px-6">Notre histoire →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section data-reveal="up" style="border-bottom:1px solid hsl(var(--border)/0.5)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div class="flex items-center justify-center gap-8 flex-wrap">
+        <span class="flex items-center gap-2 text-sm font-medium text-gray-500"><span class="text-lg">🌿</span> Coton bio GOTS</span>
+        <span class="text-gray-700">|</span>
+        <span class="flex items-center gap-2 text-sm font-medium text-gray-500"><span class="text-lg">🇧🇪</span> Fabriqué en Belgique</span>
+        <span class="text-gray-700">|</span>
+        <span class="flex items-center gap-2 text-sm font-medium text-gray-500"><span class="text-lg">♻️</span> Zéro plastique</span>
+        <span class="text-gray-700">|</span>
+        <span class="flex items-center gap-2 text-sm font-medium text-gray-500"><span class="text-lg">🚚</span> Livraison en Belgique</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">Nos valeurs</p>
+        <h2 class="font-display text-4xl" data-reveal="up">Une mode qui a du sens</h2>
+        <div class="section-divider hr-anim"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-stagger>
+        <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl p-8 text-center">
+          <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-5">🌿</div>
+          <h3 class="font-semibold text-lg mb-2">100&nbsp;% Coton Bio</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Certifié GOTS, notre coton est cultivé sans pesticides ni OGM. Le résultat : un tissu doux, respirant et respectueux de votre peau comme de la planète.</p>
+        </div>
+        <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl p-8 text-center">
+          <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-5">🇧🇪</div>
+          <h3 class="font-semibold text-lg mb-2">Fabriqué en Belgique</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">De la conception à l'impression, tout est réalisé en Belgique. Circuit court garanti pour réduire notre empreinte carbone et soutenir l'économie locale.</p>
+        </div>
+        <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl p-8 text-center">
+          <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-5">♻️</div>
+          <h3 class="font-semibold text-lg mb-2">Éco-responsable</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Nos encres sont à base d'eau, nos emballages sont recyclés et recyclables, et nous avons banni le plastique de toute notre chaîne logistique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured products -->
+  <section class="py-16 md:py-24 bg-[#1A1917]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">Boutique</p>
+        <h2 class="font-display text-4xl" data-reveal="up">Nos coups de cœur</h2>
+        <p class="text-gray-400 mt-3 max-w-lg mx-auto" data-reveal="up">Trois designs qui incarnent parfaitement l'esprit SEASO : voyage, culture et engagement.</p>
+        <div class="section-divider hr-anim"></div>
+      </div>
+      <div id="featured-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Filled by JS -->
+      </div>
+      <div class="text-center mt-10" data-reveal="up">
+        <a href="/catalog.html" class="btn-primary text-lg !px-10 !py-4"><span>Voir toute la collection</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it's made -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">Le processus</p>
+        <h2 class="font-display text-4xl" data-reveal="up">Du coton à votre porte</h2>
+        <div class="section-divider hr-anim"></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10" data-stagger>
+        <div class="text-center p-5">
+          <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-4">🌱</div>
+          <h3 class="font-semibold mb-2">1. Coton bio</h3>
+          <p class="text-sm text-gray-400">Notre coton GOTS est récolté dans des fermes certifiées, sans pesticides ni produits chimiques.</p>
+        </div>
+        <div class="text-center p-5">
+          <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-4">🎨</div>
+          <h3 class="font-semibold mb-2">2. Design</h3>
+          <p class="text-sm text-gray-400">Chaque merveille est interprétée par notre équipe créative en un design unique, moderne et élégant.</p>
+        </div>
+        <div class="text-center p-5">
+          <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-4">🖨️</div>
+          <h3 class="font-semibold mb-2">3. Impression</h3>
+          <p class="text-sm text-gray-400">Imprimé en Belgique avec des encres à base d'eau, pour des couleurs vibrantes et durables.</p>
+        </div>
+        <div class="text-center p-5">
+          <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-4">📦</div>
+          <h3 class="font-semibold mb-2">4. Livraison</h3>
+          <p class="text-sm text-gray-400">Emballé dans du papier recyclé, sans plastique, et livré chez vous en Belgique sous quelques jours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept with images -->
+  <section class="py-16 md:py-24 bg-[#1A1917]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">Le concept</p>
+          <h2 class="font-display text-4xl" data-reveal="up" style="line-height:1.15">7 merveilles,<br>7 t-shirts</h2>
+          <div class="section-divider left mt-5 mb-6 hr-anim"></div>
+          <p class="text-gray-400 leading-relaxed" data-reveal="up">
+            Chaque t-shirt SEASO raconte l'histoire d'une merveille du monde moderne.
+            De la Grande Muraille de Chine au Taj Mahal, en passant par le Machu Picchu
+            et le Colisée de Rome, notre collection vous invite au voyage — tout en restant
+            fidèle à nos valeurs : coton bio, fabrication belge et respect de l'environnement.
+          </p>
+          <p class="text-gray-400 leading-relaxed mt-4" data-reveal="up">
+            Chaque design capture l'essence et la majesté de ces lieux emblématiques,
+            réinterprétés dans un style moderne et minimaliste. Porter un t-shirt SEASO,
+            c'est porter un bout du monde sur soi.
+          </p>
+          <div data-reveal="up" class="mt-6">
+            <a href="/about.html" class="btn-outline"><span>En savoir plus</span></a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=400&q=80&fit=crop" alt="Grande Muraille de Chine" class="rounded-2xl aspect-square object-cover w-full" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&q=80&fit=crop" alt="Taj Mahal" class="rounded-2xl aspect-square object-cover w-full" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=400&q=80&fit=crop" alt="Machu Picchu" class="rounded-2xl aspect-square object-cover w-full" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=80&fit=crop" alt="Colisée de Rome" class="rounded-2xl aspect-square object-cover w-full" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">Témoignages</p>
+        <h2 class="font-display text-4xl" data-reveal="up">Ce qu'en pensent nos clients</h2>
+        <div class="section-divider hr-anim"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" data-stagger>
+        <div class="bg-[#1A1917] rounded-2xl p-6">
+          <div class="text-amber-500 mb-3">★★★★★</div>
+          <p class="text-sm text-gray-400 leading-relaxed">"Le coton est incroyablement doux, et le design du Machu Picchu est magnifique. On sent vraiment la qualité. Je recommande à 100&nbsp;% !"</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand flex items-center justify-center text-white text-sm font-bold">S</div>
+            <div>
+              <p class="font-semibold text-sm">Sophie L.</p>
+              <p class="text-xs text-gray-400">Bruxelles</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#1A1917] rounded-2xl p-6">
+          <div class="text-amber-500 mb-3">★★★★★</div>
+          <p class="text-sm text-gray-400 leading-relaxed">"J'ai offert le Colisée à mon frère pour son anniversaire. L'emballage est soigné et éco-responsable, le t-shirt est super bien coupé. Top qualité !"</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gold flex items-center justify-center text-white text-sm font-bold">M</div>
+            <div>
+              <p class="font-semibold text-sm">Maxime D.</p>
+              <p class="text-xs text-gray-400">Liège</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#1A1917] rounded-2xl p-6">
+          <div class="text-amber-500 mb-3">★★★★★</div>
+          <p class="text-sm text-gray-400 leading-relaxed">"Enfin une marque belge qui allie mode et écologie. Le Taj Mahal est mon préféré. La livraison a été rapide et le t-shirt est magnifique après plusieurs lavages."</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-dark flex items-center justify-center text-white text-sm font-bold">A</div>
+            <div>
+              <p class="font-semibold text-sm">Amina K.</p>
+              <p class="text-xs text-gray-400">Namur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="hero-bg">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center" style="position:relative;z-index:1">
+      <h2 class="font-display text-4xl font-bold mb-4" data-reveal="up">Prêt à voyager ?</h2>
+      <p class="hero-desc max-w-lg mx-auto mb-8" data-reveal="up">
+        Rejoignez le mouvement SEASO. Un t-shirt bio, un design unique,
+        une planète respectée.
+      </p>
+      <div data-reveal="up">
+        <a href="/catalog.html" class="btn-primary text-lg !px-10 !py-4" style="background:#C9A84C;color:#111110"><span>Voir la collection</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/images.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      let products;
+      try {
+        products = await Api.fetchProducts();
+      } catch (e) {
+        products = FALLBACK_PRODUCTS;
+      }
+      const featured = products.slice(0, 3);
+      const container = document.getElementById('featured-products');
+      container.innerHTML = featured.map(p => productCardHTML(p)).join('');
+      initScrollAnimations();
+    });
+  </script>
+</body>
+</html>
