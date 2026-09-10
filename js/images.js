@@ -1,12 +1,12 @@
 /* Shared wonder images & emojis */
 const WONDER_IMAGES = {
-  'grande-muraille':   '/images/products/grande-muraille.svg',
-  'petra':             '/images/products/petra.svg',
-  'christ-redempteur': '/images/products/christ-redempteur.svg',
-  'machu-picchu':      '/images/products/machu-picchu.svg',
-  'chichen-itza':      '/images/products/chichen-itza.svg',
-  'colisee':           '/images/products/colisee.svg',
-  'taj-mahal':         '/images/products/taj-mahal.svg',
+  'grande-muraille':   'images/products/grande-muraille.svg',
+  'petra':             'images/products/petra.svg',
+  'christ-redempteur': 'images/products/christ-redempteur.svg',
+  'machu-picchu':      'images/products/machu-picchu.svg',
+  'chichen-itza':      'images/products/chichen-itza.svg',
+  'colisee':           'images/products/colisee.svg',
+  'taj-mahal':         'images/products/taj-mahal.svg',
 };
 
 const WONDER_EMOJIS = {
@@ -33,7 +33,7 @@ function productCardHTML(p, opts = {}) {
   const tag = opts.headingTag || 'h3';
   const img = WONDER_IMAGES[p.slug] || p.image_url || '';
   return `
-    <a href="/product.html?slug=${p.slug}" class="product-card block" data-reveal="up">
+    <a href="product.html?slug=${p.slug}" class="product-card block" data-reveal="up">
       <div class="overflow-hidden">
         ${img
           ? `<img src="${img}" alt="${p.name}" class="w-full object-cover" style="aspect-ratio:4/5" loading="lazy" onload="this.classList.add('loaded')">`

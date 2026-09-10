@@ -191,12 +191,12 @@ function renderHeader() {
     <header class="glass-header sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
-          <a href="/" class="font-display text-2xl md:text-3xl font-bold tracking-tight" style="color:#C9A84C">SEASO</a>
+          <a href="index.html" class="font-display text-2xl md:text-3xl font-bold tracking-tight" style="color:#C9A84C">SEASO</a>
           <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-400">
-            <a href="/" class="nav-link py-1">Accueil</a>
-            <a href="/catalog.html" class="nav-link py-1">Catalogue</a>
-            <a href="/about.html" class="nav-link py-1">À propos</a>
-            <a href="/cart.html" class="relative p-1 nav-link">
+            <a href="index.html" class="nav-link py-1">Accueil</a>
+            <a href="catalog.html" class="nav-link py-1">Catalogue</a>
+            <a href="about.html" class="nav-link py-1">À propos</a>
+            <a href="cart.html" class="relative p-1 nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" style="width:1.25rem;height:1.25rem" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
               </svg>
@@ -220,10 +220,10 @@ function renderHeader() {
           </button>
         </div>
         <nav class="flex flex-col gap-8 text-2xl font-medium text-gray-300">
-          <a href="/" class="hover:text-gold">Accueil</a>
-          <a href="/catalog.html" class="hover:text-gold">Catalogue</a>
-          <a href="/about.html" class="hover:text-gold">À propos</a>
-          <a href="/cart.html" class="flex items-center gap-3 hover:text-gold">
+          <a href="index.html" class="hover:text-gold">Accueil</a>
+          <a href="catalog.html" class="hover:text-gold">Catalogue</a>
+          <a href="about.html" class="hover:text-gold">À propos</a>
+          <a href="cart.html" class="flex items-center gap-3 hover:text-gold">
             Panier ${count > 0 ? '<span class="cart-badge-mobile">' + count + '</span>' : ''}
           </a>
         </nav>
@@ -265,18 +265,18 @@ function renderFooter() {
           <div>
             <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-5">Boutique</h4>
             <ul class="space-y-3 text-sm text-gray-400">
-              <li><a href="/" class="nav-link">Accueil</a></li>
-              <li><a href="/catalog.html" class="nav-link">Catalogue</a></li>
-              <li><a href="/about.html" class="nav-link">À propos</a></li>
-              <li><a href="/cart.html" class="nav-link">Panier</a></li>
+              <li><a href="index.html" class="nav-link">Accueil</a></li>
+              <li><a href="catalog.html" class="nav-link">Catalogue</a></li>
+              <li><a href="about.html" class="nav-link">À propos</a></li>
+              <li><a href="cart.html" class="nav-link">Panier</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-5">Informations</h4>
             <ul class="space-y-3 text-sm text-gray-400">
-              <li><a href="/legal.html" class="nav-link">Mentions légales</a></li>
-              <li><a href="/legal.html#cgv" class="nav-link">CGV</a></li>
-              <li><a href="/legal.html#privacy" class="nav-link">Confidentialité</a></li>
+              <li><a href="legal.html" class="nav-link">Mentions légales</a></li>
+              <li><a href="legal.html#cgv" class="nav-link">CGV</a></li>
+              <li><a href="legal.html#privacy" class="nav-link">Confidentialité</a></li>
             </ul>
           </div>
         </div>
