@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue — SEASO</title>
+  <meta name="description" content="Découvrez les 7 t-shirts SEASO, inspirés des merveilles du monde. 100% coton bio, made in Belgium.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#1B3A2D', dark: '#0F2A1E' },
+            gold: { DEFAULT: '#C9A84C', dark: '#A68B3A' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="font-sans text-[#E8E4DD] antialiased">
+
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>🌿 Livraison gratuite dès 50€ &nbsp;·&nbsp; 100% coton bio &nbsp;·&nbsp; Made in Belgium 🇧🇪 &nbsp;·&nbsp; Retour gratuit sous 14 jours &nbsp;·&nbsp; Zéro plastique ♻️</span>
+    </div>
+  </div>
+
+  <div id="loader-screen" class="loader-screen">
+    <div class="loader-logo-wrap"><div class="loader-logo">SEASO</div></div>
+    <div class="loader-ring-wrap"><div class="loader-ring"></div></div>
+    <p class="loader-tagline">7 merveilles · coton bio</p>
+  </div>
+
+  <div id="site-header"></div>
+
+  <!-- Page hero -->
+  <section class="section bg-[#1A1917]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">Collection</p>
+      <h1 class="text-4xl font-display font-bold">
+        <span class="split-text">Notre collection</span>
+      </h1>
+      <p class="text-gray-400 text-lg mt-4 max-w-2xl" data-reveal="up">
+        7 merveilles du monde, 7 t-shirts uniques en coton bio belge.
+        Chaque design est une invitation au voyage, imprimé avec des encres à base d'eau sur un coton doux et respirant.
+      </p>
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Filters -->
+    <div class="flex items-center gap-4 mb-8 flex-wrap" data-reveal="up">
+      <div class="relative" style="flex:1;min-width:200px">
+        <input id="search-input" type="search" placeholder="Rechercher un t-shirt..." class="w-full text-sm" style="background:#1A1917;color:#E8E4DD;border:1px solid rgba(255,255,255,0.06);border-radius:0.75rem;padding:0.625rem 1rem;outline:none">
+      </div>
+      <div class="flex gap-2 flex-wrap" id="filter-btns">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+      </div>
+    </div>
+
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Filled by JS -->
+    </div>
+
+    <div id="loading" class="text-center py-16">
+      <div class="flex items-center justify-center gap-3 text-gray-400">
+        <svg class="animate-spin" style="width:1.25rem;height:1.25rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle style="opacity:0.25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path style="opacity:0.75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+        </svg>
+        Chargement…
+      </div>
+    </div>
+
+    <div id="error" class="hidden text-center py-16">
+      <p class="text-5xl mb-6">😕</p>
+      <p class="text-gray-400 text-lg mb-6">Impossible de charger les produits.</p>
+      <button onclick="location.reload()" class="btn-primary"><span>Réessayer</span></button>
+    </div>
+
+    <!-- Info bar -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12 py-10 text-center text-sm text-gray-400 border-t border-white/[0.06]" data-stagger>
+      <div>
+        <p class="font-semibold mb-1 text-[#E8E4DD]">Tailles S à XL</p>
+        <p>Coupe unisexe, confortable et moderne. Taille normalement.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-1 text-[#E8E4DD]">Livraison en Belgique</p>
+        <p>Expédition sous 3-5 jours ouvrés. Emballage recyclé, zéro plastique.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-1 text-[#E8E4DD]">Retour sous 14 jours</p>
+        <p>Pas convaincu ? Retournez votre article dans son état d'origine, sans frais.</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/images.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('product-grid');
+      const loading = document.getElementById('loading');
+      const error = document.getElementById('error');
+      let allProducts = [];
+      let currentFilter = 'all';
+      let currentSearch = '';
+
+      function renderProducts() {
+        let filtered = allProducts;
+        if (currentFilter !== 'all') {
+          filtered = filtered.filter(p => p.wonder === currentFilter);
+        }
+        if (currentSearch) {
+          const q = currentSearch.toLowerCase();
+          filtered = filtered.filter(p => p.name.toLowerCase().includes(q) || p.wonder.toLowerCase().includes(q));
+        }
+        grid.innerHTML = filtered.length
+          ? filtered.map(p => productCardHTML(p, { headingTag: 'h2' })).join('')
+          : '<p class="text-center text-gray-400 py-12" style="grid-column:1/-1">Aucun produit trouvé.</p>';
+        initScrollAnimations();
+      }
+
+      try {
+        allProducts = await Api.fetchProducts();
+      } catch (e) {
+        console.warn('API indisponible, utilisation des produits fallback');
+        allProducts = FALLBACK_PRODUCTS;
+      }
+      loading.classList.add('hidden');
+
+      if (allProducts && allProducts.length) {
+        const wonders = [...new Set(allProducts.map(p => p.wonder))];
+        const filterContainer = document.getElementById('filter-btns');
+        wonders.forEach(w => {
+          const btn = document.createElement('button');
+          btn.className = 'filter-btn';
+          btn.dataset.filter = w;
+          btn.textContent = w;
+          filterContainer.appendChild(btn);
+        });
+
+        filterContainer.addEventListener('click', (e) => {
+          const btn = e.target.closest('.filter-btn');
+          if (!btn) return;
+          filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.filter;
+          renderProducts();
+        });
+
+        document.getElementById('search-input').addEventListener('input', (e) => {
+          currentSearch = e.target.value;
+          renderProducts();
+        });
+
+        renderProducts();
+      } else {
+        error.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

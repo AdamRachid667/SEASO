@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier — SEASO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#1B3A2D', dark: '#0F2A1E' },
+            gold: { DEFAULT: '#C9A84C', dark: '#A68B3A' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="font-sans text-[#E8E4DD] antialiased">
+
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>🌿 Livraison gratuite dès 50€ &nbsp;·&nbsp; 100% coton bio &nbsp;·&nbsp; Made in Belgium 🇧🇪 &nbsp;·&nbsp; Retour gratuit sous 14 jours &nbsp;·&nbsp; Zéro plastique ♻️</span>
+    </div>
+  </div>
+
+  <div id="loader-screen" class="loader-screen">
+    <div class="loader-logo-wrap"><div class="loader-logo">SEASO</div></div>
+    <div class="loader-ring-wrap"><div class="loader-ring"></div></div>
+    <p class="loader-tagline">7 merveilles · coton bio</p>
+  </div>
+
+  <div id="site-header"></div>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <h1 class="font-display text-3xl font-bold mb-8">
+      <span class="split-text">Votre panier</span>
+    </h1>
+
+    <!-- Empty state -->
+    <div id="empty-cart" class="hidden text-center py-16">
+      <div class="w-14 h-14 rounded-xl bg-[#1A1917] flex items-center justify-center text-2xl mx-auto mb-5 text-5xl" data-reveal="scale">🛒</div>
+      <p class="text-gray-400 text-lg mb-2" data-reveal="up">Votre panier est vide</p>
+      <p class="text-gray-400 text-sm mb-6" data-reveal="up">Découvrez nos t-shirts inspirés des 7 merveilles du monde.</p>
+      <div data-reveal="up">
+        <a href="/catalog.html" class="btn-primary"><span>Découvrir la collection</span></a>
+      </div>
+    </div>
+
+    <!-- Cart items -->
+    <div id="cart-content" class="hidden">
+      <div id="cart-items" style="display:flex;flex-direction:column;gap:1rem;">
+        <!-- Filled by JS -->
+      </div>
+
+      <!-- Total -->
+      <div class="mt-6 py-6 border-t border-white/[0.06]" data-reveal="up">
+        <div class="flex justify-between items-center">
+          <span class="text-gray-400 text-lg">Sous-total</span>
+          <span id="cart-total" class="text-3xl font-bold font-display"></span>
+        </div>
+        <p class="text-sm text-gray-400 mt-2">Livraison calculée à l'étape suivante</p>
+      </div>
+
+      <!-- Checkout form -->
+      <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl p-6 mt-6" data-reveal="up">
+        <h2 class="font-display font-bold text-2xl mb-5">Passer commande</h2>
+        <label class="block text-sm font-semibold text-gray-400 mb-3" for="email">Adresse email</label>
+        <input id="email" type="email" placeholder="votre@email.com" class="w-full">
+        <div id="checkout-error" class="hidden mt-3 text-sm text-red-500"></div>
+        <button id="checkout-btn" class="btn-primary w-full text-lg py-4 mt-5">
+          <span>Commander — <span id="checkout-total"></span></span>
+        </button>
+        <div class="flex items-center justify-center gap-5 mt-5 text-xs text-gray-400">
+          <span>🔒 Paiement sécurisé</span>
+          <span>·</span>
+          <span>Powered by Stripe</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/images.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    function renderCart() {
+      const cart = Cart.getCart();
+      const emptyEl = document.getElementById('empty-cart');
+      const contentEl = document.getElementById('cart-content');
+
+      if (cart.length === 0) {
+        emptyEl.classList.remove('hidden');
+        contentEl.classList.add('hidden');
+        initScrollAnimations();
+        return;
+      }
+
+      emptyEl.classList.add('hidden');
+      contentEl.classList.remove('hidden');
+
+      const itemsEl = document.getElementById('cart-items');
+      itemsEl.innerHTML = cart.map((item, i) => `
+        <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl flex items-center gap-5 p-5" data-reveal="up">
+          <div class="product-placeholder rounded-xl" style="width:4rem;height:4rem;min-height:auto;font-size:0.875rem">
+            ${item.name.charAt(0)}
+          </div>
+          <div style="flex:1;min-width:0">
+            <h3 class="font-semibold truncate" style="margin:0">${item.name}</h3>
+            <p class="text-sm text-gray-400 mt-1">Taille : ${item.size}</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="changeQty(${i}, -1)" class="qty-btn">−</button>
+            <span style="width:2rem;text-align:center;font-weight:500">${item.quantity}</span>
+            <button onclick="changeQty(${i}, 1)" class="qty-btn">+</button>
+          </div>
+          <div style="text-align:right;min-width:5rem">
+            <p class="font-bold text-lg" style="margin:0">${((item.price_cents * item.quantity) / 100).toFixed(2)}&nbsp;€</p>
+            <button onclick="removeItem(${i})" class="text-xs text-gray-400 mt-1" style="background:none;border:none;cursor:pointer">Supprimer</button>
+          </div>
+        </div>
+      `).join('');
+
+      const total = Cart.getCartTotal();
+      const formatted = (total / 100).toFixed(2) + ' €';
+      document.getElementById('cart-total').textContent = formatted;
+      document.getElementById('checkout-total').textContent = formatted;
+      initScrollAnimations();
+    }
+
+    function changeQty(index, delta) {
+      const cart = Cart.getCart();
+      const newQty = cart[index].quantity + delta;
+      Cart.updateQuantity(index, newQty);
+      renderCart();
+      renderHeader();
+    }
+
+    function removeItem(index) {
+      Cart.removeFromCart(index);
+      renderCart();
+      renderHeader();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCart();
+
+      document.getElementById('checkout-btn').addEventListener('click', async () => {
+        const email = document.getElementById('email').value.trim();
+        const errorEl = document.getElementById('checkout-error');
+        errorEl.classList.add('hidden');
+
+        if (!email || !email.includes('@')) {
+          errorEl.textContent = 'Veuillez entrer une adresse email valide.';
+          errorEl.classList.remove('hidden');
+          gsap.from(errorEl, { opacity: 0, y: -5, duration: 0.4, ease: 'power3.out' });
+          return;
+        }
+
+        const cart = Cart.getCart();
+        if (cart.length === 0) return;
+
+        const items = cart.map(item => ({
+          product_id: item.product_id,
+          size: item.size,
+          quantity: item.quantity,
+        }));
+
+        const btn = document.getElementById('checkout-btn');
+        btn.disabled = true;
+        btn.querySelector('span').textContent = 'Redirection vers le paiement…';
+
+        try {
+          const result = await Api.createOrder(email, items);
+          if (result.checkout_url) {
+            Cart.clearCart();
+            window.location.href = result.checkout_url;
+          }
+        } catch (e) {
+          errorEl.textContent = e.message || 'Erreur lors de la commande. Veuillez réessayer.';
+          errorEl.classList.remove('hidden');
+          btn.disabled = false;
+          btn.querySelector('span').textContent = 'Commander';
+          renderCart();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

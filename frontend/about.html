@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — SEASO</title>
+  <meta name="description" content="Découvrez l'histoire de SEASO, mini-entreprise belge de t-shirts bio inspirés des 7 merveilles du monde.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#1B3A2D', dark: '#0F2A1E' },
+            gold: { DEFAULT: '#C9A84C', dark: '#A68B3A' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="font-sans text-[#E8E4DD] antialiased">
+
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>🌿 Livraison gratuite dès 50€ &nbsp;·&nbsp; 100% coton bio &nbsp;·&nbsp; Made in Belgium 🇧🇪 &nbsp;·&nbsp; Retour gratuit sous 14 jours &nbsp;·&nbsp; Zéro plastique ♻️</span>
+    </div>
+  </div>
+
+  <div id="loader-screen" class="loader-screen">
+    <div class="loader-logo-wrap"><div class="loader-logo">SEASO</div></div>
+    <div class="loader-ring-wrap"><div class="loader-ring"></div></div>
+    <p class="loader-tagline">7 merveilles · coton bio</p>
+  </div>
+
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-bg" style="color:white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center" style="position:relative;z-index:1">
+        <p class="text-sm uppercase tracking-wide font-medium mb-4" style="color:rgba(255,255,255,0.5)" data-reveal="up">Notre histoire</p>
+        <h1 class="font-display text-5xl font-bold" style="line-height:1.05">
+          <span class="split-text">Une mini-entreprise avec de grandes ambitions</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16" style="display:flex;flex-direction:column;gap:4rem">
+
+      <!-- Origin with image -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">L'origine</p>
+          <h2 class="font-display text-3xl font-bold mb-5" data-reveal="up">SEASO, c'est quoi ?</h2>
+          <p class="text-gray-400 leading-relaxed" data-reveal="up">
+            SEASO est née d'une idée simple : allier la passion du voyage à une mode responsable.
+            Notre mini-entreprise belge, créée dans le cadre du programme Les Jeunes Entreprises (LJE),
+            imagine des t-shirts en coton 100&nbsp;% biologique, chacun inspiré par l'une des
+            7 merveilles du monde moderne.
+          </p>
+          <p class="text-gray-400 leading-relaxed mt-3" data-reveal="up">
+            Le nom SEASO vient de la contraction de « Season » — parce que chaque saison est une
+            nouvelle occasion de découvrir le monde et d'affirmer son style, tout en respectant la planète.
+          </p>
+        </div>
+        <div data-reveal="right">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80&fit=crop" alt="T-shirts pliés" class="rounded-2xl w-full object-cover" style="aspect-ratio:4/3;box-shadow:0 10px 30px rgba(0,0,0,0.1)" loading="lazy" onload="this.classList.add('loaded')">
+        </div>
+      </div>
+
+      <!-- Mission with image -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div data-reveal="left">
+          <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&q=80&fit=crop" alt="Coton biologique" class="rounded-2xl w-full object-cover" style="aspect-ratio:4/3;box-shadow:0 10px 30px rgba(0,0,0,0.1)" loading="lazy" onload="this.classList.add('loaded')">
+        </div>
+        <div>
+          <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">La vision</p>
+          <h2 class="font-display text-3xl font-bold mb-5" data-reveal="up">Notre mission</h2>
+          <p class="text-gray-400 leading-relaxed" data-reveal="up">
+            Nous croyons qu'il est possible de s'habiller avec style tout en respectant la
+            planète. C'est pourquoi nous avons fait le choix du coton bio certifié GOTS, d'une
+            fabrication 100&nbsp;% locale en Belgique et d'un emballage zéro plastique.
+          </p>
+          <p class="text-gray-400 leading-relaxed mt-3" data-reveal="up">
+            Chaque étape de notre production est pensée pour minimiser notre impact environnemental :
+            des fermes de coton bio aux encres à base d'eau, en passant par notre emballage en papier
+            recyclé. Nous voulons prouver qu'une mode éthique peut aussi être belle, accessible et moderne.
+          </p>
+        </div>
+      </div>
+
+      <!-- The 7 wonders -->
+      <div>
+        <div class="text-center mb-8">
+          <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">L'inspiration</p>
+          <h2 class="font-display text-3xl font-bold mb-3" data-reveal="up">Les 7 merveilles</h2>
+          <p class="text-gray-400 max-w-xl mx-auto" data-reveal="up">
+            Notre collection s'inspire des 7 nouvelles merveilles du monde, élues en 2007
+            par plus de 100 millions de personnes à travers le globe.
+          </p>
+          <div class="section-divider mt-5 hr-anim"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-stagger>
+          <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl" style="padding:0;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=400&q=80&fit=crop" alt="Grande Muraille" class="w-full object-cover" style="aspect-ratio:3/4" loading="lazy" onload="this.classList.add('loaded')">
+            <div style="padding:0.75rem">
+              <p class="font-semibold text-sm">Grande Muraille</p>
+              <p class="text-xs text-gray-400">Chine</p>
+            </div>
+          </div>
+          <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl" style="padding:0;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1615811648503-479d06197ff3?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pétra" class="w-full object-cover" style="aspect-ratio:3/4" loading="lazy" onload="this.classList.add('loaded')">
+            <div style="padding:0.75rem">
+              <p class="font-semibold text-sm">Pétra</p>
+              <p class="text-xs text-gray-400">Jordanie</p>
+            </div>
+          </div>
+          <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl" style="padding:0;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&q=80&fit=crop" alt="Christ Rédempteur" class="w-full object-cover" style="aspect-ratio:3/4" loading="lazy" onload="this.classList.add('loaded')">
+            <div style="padding:0.75rem">
+              <p class="font-semibold text-sm">Christ Rédempteur</p>
+              <p class="text-xs text-gray-400">Brésil</p>
+            </div>
+          </div>
+          <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl" style="padding:0;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=400&q=80&fit=crop" alt="Machu Picchu" class="w-full object-cover" style="aspect-ratio:3/4" loading="lazy" onload="this.classList.add('loaded')">
+            <div style="padding:0.75rem">
+              <p class="font-semibold text-sm">Machu Picchu</p>
+              <p class="text-xs text-gray-400">Pérou</p>
+            </div>
+          </div>
+          <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl" style="padding:0;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?w=400&q=80&fit=crop" alt="Chichén Itzá" class="w-full object-cover" style="aspect-ratio:3/4" loading="lazy" onload="this.classList.add('loaded')">
+            <div style="padding:0.75rem">
+              <p class="font-semibold text-sm">Chichén Itzá</p>
+              <p class="text-xs text-gray-400">Mexique</p>
+            </div>
+          </div>
+          <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl" style="padding:0;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=80&fit=crop" alt="Colisée" class="w-full object-cover" style="aspect-ratio:3/4" loading="lazy" onload="this.classList.add('loaded')">
+            <div style="padding:0.75rem">
+              <p class="font-semibold text-sm">Colisée</p>
+              <p class="text-xs text-gray-400">Italie</p>
+            </div>
+          </div>
+          <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl" style="padding:0;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&q=80&fit=crop" alt="Taj Mahal" class="w-full object-cover" style="aspect-ratio:3/4" loading="lazy" onload="this.classList.add('loaded')">
+            <div style="padding:0.75rem">
+              <p class="font-semibold text-sm">Taj Mahal</p>
+              <p class="text-xs text-gray-400">Inde</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commitments -->
+      <div>
+        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">La promesse</p>
+        <h2 class="font-display text-3xl font-bold mb-5" data-reveal="up">Nos engagements</h2>
+        <p class="text-gray-400 mb-6" data-reveal="up">
+          Chez SEASO, chaque décision est guidée par notre volonté de faire mieux pour la planète.
+          Voici les piliers de notre démarche :
+        </p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem" data-stagger>
+          <div class="commitment-card">
+            <div class="w-12 h-12 rounded-xl bg-[#1A1917] flex items-center justify-center text-lg flex-shrink-0">🌿</div>
+            <div>
+              <p class="font-semibold">Coton 100% biologique</p>
+              <p class="text-sm text-gray-400 mt-1">Certifié GOTS (Global Organic Textile Standard), notre coton est cultivé sans pesticides, sans OGM et avec une consommation d'eau réduite de 91% par rapport au coton conventionnel.</p>
+            </div>
+          </div>
+          <div class="commitment-card">
+            <div class="w-12 h-12 rounded-xl bg-[#1A1917] flex items-center justify-center text-lg flex-shrink-0">💧</div>
+            <div>
+              <p class="font-semibold">Encres à base d'eau</p>
+              <p class="text-sm text-gray-400 mt-1">Nos impressions utilisent exclusivement des encres à base d'eau, sans solvants ni produits chimiques nocifs. Les couleurs sont vibrantes et résistent au lavage.</p>
+            </div>
+          </div>
+          <div class="commitment-card">
+            <div class="w-12 h-12 rounded-xl bg-[#1A1917] flex items-center justify-center text-lg flex-shrink-0">🇧🇪</div>
+            <div>
+              <p class="font-semibold">Fabrication 100% belge</p>
+              <p class="text-sm text-gray-400 mt-1">De la conception graphique à l'impression en passant par l'assemblage, tout est réalisé en Belgique. Le circuit court nous permet de garantir qualité et traçabilité.</p>
+            </div>
+          </div>
+          <div class="commitment-card">
+            <div class="w-12 h-12 rounded-xl bg-[#1A1917] flex items-center justify-center text-lg flex-shrink-0">♻️</div>
+            <div>
+              <p class="font-semibold">Emballage zéro plastique</p>
+              <p class="text-sm text-gray-400 mt-1">Chaque commande est emballée dans du papier recyclé et recyclable. Pas de plastique, pas de superflu — juste l'essentiel, emballé avec soin.</p>
+            </div>
+          </div>
+          <div class="commitment-card">
+            <div class="w-12 h-12 rounded-xl bg-[#1A1917] flex items-center justify-center text-lg flex-shrink-0">💰</div>
+            <div>
+              <p class="font-semibold">Prix juste et transparent</p>
+              <p class="text-sm text-gray-400 mt-1">Nous croyons que la mode responsable ne doit pas être un luxe. Nos prix reflètent le coût réel de production — pas de marges excessives, pas d'intermédiaires inutiles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Numbers -->
+      <div class="bg-[#1A1917] border border-white/[0.06] rounded-2xl p-8" data-reveal="up">
+        <h2 class="font-display text-2xl font-bold mb-6 text-center">SEASO en chiffres</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="font-display text-4xl font-bold text-gold">7</p>
+            <p class="text-sm text-gray-400 mt-1">designs uniques</p>
+          </div>
+          <div>
+            <p class="font-display text-4xl font-bold text-gold">100%</p>
+            <p class="text-sm text-gray-400 mt-1">coton bio</p>
+          </div>
+          <div>
+            <p class="font-display text-4xl font-bold text-gold">0</p>
+            <p class="text-sm text-gray-400 mt-1">plastique</p>
+          </div>
+          <div>
+            <p class="font-display text-4xl font-bold text-gold">100%</p>
+            <p class="text-sm text-gray-400 mt-1">fabriqué en Belgique</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div>
+        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3" data-reveal="up">FAQ</p>
+        <h2 class="font-display text-3xl font-bold mb-5" data-reveal="up">Questions fréquentes</h2>
+        <div style="display:flex;flex-direction:column;gap:1rem" data-stagger>
+          <details class="bg-[#1A1917] border border-white/[0.06] rounded-xl p-5">
+            <summary class="font-semibold" style="cursor:pointer">Comment choisir ma taille ?</summary>
+            <p class="text-gray-400 mt-3 text-sm leading-relaxed">Nos t-shirts ont une coupe unisexe et taillent normalement. Si vous hésitez entre deux tailles, nous vous conseillons de prendre la taille au-dessus pour un confort optimal. Le coton bio peut rétrécir légèrement au premier lavage (environ 3-5%).</p>
+          </details>
+          <details class="bg-[#1A1917] border border-white/[0.06] rounded-xl p-5">
+            <summary class="font-semibold" style="cursor:pointer">Quels sont les délais de livraison ?</summary>
+            <p class="text-gray-400 mt-3 text-sm leading-relaxed">Nous livrons en Belgique sous 3 à 5 jours ouvrés après confirmation de votre commande. Votre colis est emballé dans du papier recyclé, sans aucun plastique.</p>
+          </details>
+          <details class="bg-[#1A1917] border border-white/[0.06] rounded-xl p-5">
+            <summary class="font-semibold" style="cursor:pointer">Comment entretenir mon t-shirt SEASO ?</summary>
+            <p class="text-gray-400 mt-3 text-sm leading-relaxed">Lavage en machine à 30°C, retourné sur l'envers. Évitez le sèche-linge pour préserver les couleurs et la qualité du coton bio. Le repassage à basse température est possible si nécessaire.</p>
+          </details>
+          <details class="bg-[#1A1917] border border-white/[0.06] rounded-xl p-5">
+            <summary class="font-semibold" style="cursor:pointer">Puis-je retourner un article ?</summary>
+            <p class="text-gray-400 mt-3 text-sm leading-relaxed">Oui ! Vous disposez de 14 jours après réception pour retourner votre article dans son état d'origine (non porté, non lavé). Contactez-nous à contact@seaso.be pour initier le retour.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center py-4">
+        <div class="section-divider mb-8 hr-anim"></div>
+        <p class="text-gray-400 mb-6 text-lg" data-reveal="up">Prêt à découvrir nos créations ?</p>
+        <div data-reveal="up">
+          <a href="/catalog.html" class="btn-primary text-lg px-12 py-4"><span>Découvrir la collection</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/images.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

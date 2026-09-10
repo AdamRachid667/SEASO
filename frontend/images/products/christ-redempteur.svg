@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" rx="24" fill="#F5F0E8"/>
+  <!-- T-shirt shape -->
+  <path d="M120,100 L100,100 L60,140 L90,170 L110,150 L110,360 L290,360 L290,150 L310,170 L340,140 L300,100 L280,100 L260,120 C245,135 155,135 140,120 Z" fill="#FAFAF7" stroke="#E8E3D8" stroke-width="2"/>
+  <!-- Christ the Redeemer silhouette -->
+  <g transform="translate(200,175)" fill="#2D5016">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="10"/>
+    <!-- Body -->
+    <rect x="-8" y="10" width="16" height="60" rx="4"/>
+    <!-- Arms outstretched -->
+    <rect x="-60" y="12" width="120" height="12" rx="6"/>
+    <!-- Hands -->
+    <circle cx="-60" cy="18" r="6"/>
+    <circle cx="60" cy="18" r="6"/>
+    <!-- Robe bottom -->
+    <polygon points="-20,70 20,70 28,100 -28,100" fill="#2D5016"/>
+    <!-- Pedestal -->
+    <rect x="-20" y="100" width="40" height="15" rx="2" opacity="0.6"/>
+    <!-- Mountain base -->
+    <polygon points="-45,115 45,115 35,105 -35,105" fill="#2D5016" opacity="0.3"/>
+  </g>
+  <!-- SEASO text -->
+  <text x="200" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" letter-spacing="4" fill="#2D5016">SEASO</text>
+  <!-- Product name -->
+  <text x="200" y="420" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#1A1A1A">Christ Rédempteur</text>
+  <text x="200" y="445" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#999">Brésil</text>
+</svg>
